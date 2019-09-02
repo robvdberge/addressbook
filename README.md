@@ -27,4 +27,6 @@ Users are able to create, read, update and delete contacts.
 
 ### Addendum
 
-* --
+Spend much time to find out that when using AJAX, some HTML tags are not parsed in the right order.
+So i had to manipulate the AJAX responsetext to make it fit.
+(/form> was parsed right behind the opening tag in stead of on the end of the form).
