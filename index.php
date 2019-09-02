@@ -15,12 +15,12 @@
             <h1>AJAX Addressbook</h1>
         </div>
         <div class="large-6 columns">
-            <a href="#" data-open="contact-modal" class="add-btn button float-right small">Nieuw Contact</a>
+            <a href="#" id="new-contact" data-open="addContact" class="add-btn button float-right small">Nieuw Contact</a>
         </div>
         <div class="clear-fix"></div>
-        <div class="reveal" id="contact-modal" data-reveal>
+        <div class="reveal" id="addContact" data-reveal>
             <h2>Voeg contact toe</h2>
-            <form id="add-contact" action="add_contact.php" method="POST">
+            <form id="add-form" action="add_contact.php" method="POST">
                 <div class="row">
                     <div class="large-6 columns">
                         <label>Voornaam
@@ -52,9 +52,9 @@
                     <div class="large-4 columns">
                         <label>Contact Groep
                             <select name="contact_group">
-                                <option value="">Familie</option>
-                                <option value="">Vrienden</option>
-                                <option value="">Zakelijk</option>
+                                <option value="Familie">Familie</option>
+                                <option value="Vrienden">Vrienden</option>
+                                <option value="Zakelijk">Zakelijk</option>
                             </select>
                         </label>
                     </div>
@@ -114,11 +114,16 @@
     <div id="page-content">
 
     </div>
+    <div class="reveal" id="editContact" data-reveal>
+        
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <script type="text/javascript">
+        $(document).foundation();
+    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

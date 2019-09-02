@@ -25,7 +25,6 @@ $db->bind(':contact_group', $_POST['contact_group']);
 
 // Execute query
 if ($db->execute()){
-    echo 'Contact was added';
-} else {
-    echo 'Contact was NOT added!!';
-}
+    header('location: index.php');
+    exit();
+} 
